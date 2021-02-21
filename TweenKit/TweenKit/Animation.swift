@@ -44,7 +44,7 @@ public class Animation : Equatable {
         return ftAction.duration
     }
     
-    var elapsedTime: CFTimeInterval = 0
+    var elapsedTime: Double = 0
     
     private let action: SchedulableAction!
     
@@ -60,7 +60,7 @@ public class Animation : Equatable {
         action.didBecomeInactive()
     }
     
-    func update(elapsedTime: CFTimeInterval) { 
+    func update(elapsedTime: Double) { 
         
         self.elapsedTime = elapsedTime
         

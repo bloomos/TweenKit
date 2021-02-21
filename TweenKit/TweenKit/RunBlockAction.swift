@@ -48,7 +48,7 @@ public class RunBlockAction: TriggerAction {
     public func didFinish() {
     }
     
-    public func update(t: CFTimeInterval) {
+    public func update(t: Double) {
         // Do nothing
     }
 }

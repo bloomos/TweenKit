@@ -68,7 +68,7 @@ public class RepeatAction: FiniteTimeAction {
         action.didFinish()
     }
     
-    public func update(t: CFTimeInterval) {
+    public func update(t: Double) {
         
         let repeatNumber = Int( t * Double(repeats) ).constrained(max: repeats-1)
         

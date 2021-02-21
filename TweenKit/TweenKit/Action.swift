@@ -33,7 +33,7 @@ public protocol FiniteTimeAction : SchedulableAction {
     
     var duration: Double {get}
     var reverse: Bool {get set}
-    func update(t: CFTimeInterval)
+    func update(t: Double)
 }
 
 // MARK: - Trigger Action
@@ -53,5 +53,5 @@ extension TriggerAction {
 
 /** Protocol for actions that run indefinitely */
 public protocol InfiniteTimeAction : SchedulableAction {
-    func update(elapsedTime: CFTimeInterval)
+    func update(elapsedTime: Double)
 }

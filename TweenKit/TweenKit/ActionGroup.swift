@@ -147,7 +147,7 @@ public class ActionGroup: FiniteTimeAction, SchedulableAction {
         }
     }
 
-    public func update(t: CFTimeInterval) {
+    public func update(t: Double) {
         
         let elapsedTime = t * duration
         let lastElapsedTime = lastUpdateT * duration

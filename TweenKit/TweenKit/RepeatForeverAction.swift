@@ -48,7 +48,7 @@ public class RepeatForeverAction: InfiniteTimeAction {
         action.didFinish()
     }
     
-    public func update(elapsedTime: CFTimeInterval) {
+    public func update(elapsedTime: Double) {
         
         let repeatNumberDouble = (elapsedTime / action.duration).orZeroIfNanOrInfinite
         let repeatNumber = Int(repeatNumberDouble)

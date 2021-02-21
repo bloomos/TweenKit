@@ -58,7 +58,7 @@ public class ReverseAction: FiniteTimeAction {
         action.didFinish()
     }
     
-    public func update(t: CFTimeInterval) {
+    public func update(t: Double) {
         action.update(t: 1 - t)
     }
 }

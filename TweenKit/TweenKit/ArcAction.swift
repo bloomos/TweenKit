@@ -91,7 +91,7 @@ public class ArcAction<T: Tweenable2DCoordinate>: FiniteTimeAction {
         update(t: reverse ? 0.0 : 1.0)
     }
     
-    public func update(t: CFTimeInterval) {
+    public func update(t: Double) {
                 
         var t = t
         t = easing.apply(t: t)

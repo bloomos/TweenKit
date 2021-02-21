@@ -71,7 +71,7 @@ public class YoyoAction: FiniteTimeAction {
         state = .idle
     }
     
-    public func update(t: CFTimeInterval) {
+    public func update(t: Double) {
         
         /*
          The order of state changes and setReverse is important here. The inner action should receive the following calls:

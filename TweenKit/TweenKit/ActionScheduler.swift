@@ -7,10 +7,11 @@
 //
 
 import Foundation
-import QuartzCore
 
-@objc public class ActionScheduler : NSObject {
+public class ActionScheduler : NSObject {
     
+    public var started: Bool = false
+
     // MARK: - Public
         
     public init(automaticallyAdvanceTime: Bool = true) {
@@ -84,7 +85,6 @@ import QuartzCore
     private var animations = [Animation]()
     private var animationsToRemove = [Animation]()
 
-    private var displayLink: DisplayLink?
     private let automaticallyAdvanceTime: Bool
     
     // MARK: - Deinit
@@ -96,26 +96,11 @@ import QuartzCore
     // MARK: - Manage Loop
     
     private func startLoop() {
-        
-        if displayLink != nil {
-            return
-        }
-                
-        displayLink = DisplayLink(handler: {[unowned self] (dt) in
-            self.displayLinkCallback(dt: dt)
-        })
+        started = true
     }
     
     private func stopLoop() {
-        
-        displayLink?.invalidate()
-        displayLink = nil
-    }
-    
-    @objc private func displayLinkCallback(dt: Double) {
-        
-        // Update Animations
-        step(dt: dt)
+        started = false
     }
     
     /// Advance the scheduler's time by amount dt

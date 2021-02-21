@@ -45,6 +45,6 @@ public class DelayAction: FiniteTimeAction {
     public func didFinish() {
     }
     
-    public func update(t: CFTimeInterval) {
+    public func update(t: Double) {
     }
 }

@@ -130,7 +130,7 @@ public class ActionSequence: FiniteTimeAction {
         }
     }
     
-    public func update(t: CFTimeInterval) {
+    public func update(t: Double) {
         
         let elapsedTime = t * duration
         let enumeratedActions = reverse ? wrappedActions.reversed().enumerated() : wrappedActions.enumerated()

@@ -150,7 +150,7 @@ class FiniteTimeActionMock: FiniteTimeAction {
     }
 
     
-    public func update(t: CFTimeInterval) {
+    public func update(t: Double) {
         updateCalled = true
     }
 }
