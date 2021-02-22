@@ -46,7 +46,7 @@ public class Animation : Equatable {
     
     var elapsedTime: Double = 0
     
-    private let action: SchedulableAction!
+    public let action: SchedulableAction!
     
     // MARK: - Methods
     
