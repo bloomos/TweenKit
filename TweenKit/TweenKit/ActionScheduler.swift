@@ -50,7 +50,7 @@ public class ActionScheduler : NSObject {
     public func remove(animation: Animation) {
         
         guard let index = animations.firstIndex(of: animation) else {
-            print("Can't find animation to remove")
+            // print("Can't find animation to remove")
             return
         }
         
